@@ -72,10 +72,10 @@ jobs:
         key: ${{ secrets.SSH_KEY }}
         passphrase: ${{ secrets.PASSPHRASE }} # Если ваш ssh-ключ защищён фразой-паролем
         script:
-          sudo curl -sSL https://get.docker.com/ | sh
-          sudo docker pull alxndrsmrnv/workflowtest
-          sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 alxndrsmrnv/workflowtest 
+          - sudo curl -sSL https://get.docker.com/ | sh
+          - sudo docker pull alxndrsmrnv/workflowtest
+          - sudo docker stop $(sudo docker ps -a -q)
+          - sudo docker run --rm -d -p 5000:5000 alxndrsmrnv/workflowtest
 
 
  
